@@ -1,10 +1,13 @@
+"use client";
+import Hero from "@/Components/home/Hero";
+import React from "react";
 
-const main = () => {
+const page = () => {
   return (
     <div>
-      <h1>This is my personal </h1>
+      <Hero />
     </div>
   );
 };
 
-export default main;
+export default page;
