@@ -15,10 +15,10 @@ export default function Header() {
   return (
     <>
       {/* TOGGLE BUTTON (RIGHT SIDE, BIG & BOLD) */}
-      <div className="fixed top-0 right-0 w-full flex justify-end p-6 z-50">
+      <div className="fixed top-5 right-0 w-full flex justify-end p-6 z-50">
         <button
           onClick={() => setOpen(true)}
-          className="text-white text-4xl md:text-5xl font-bold"
+          className="text-white text-4xl md:text-6xl font-extrabold hover:text-gray-400 transition"
         >
           <HiOutlineBars3BottomRight />
         </button>
