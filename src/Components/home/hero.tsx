@@ -12,7 +12,7 @@ const Hero = () => {
           {/* LEFT COLUMN */}
           <div className="md:w-1/2 text-center md:text-left">
             {/* Small heading */}
-            <p className="tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl text-gray-400 mb-4 sm:mb-6">
+            <p className="tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl text-gray-400 mb-7 sm:mb-8 -mt-2 sm:-mt-4">
               ✦ HELLO...!
             </p>
 
@@ -53,14 +53,40 @@ const Hero = () => {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-md lg:h-112 xl:w-lg xl:h-128">
+          <div className="md:w-1/2 flex justify-center mt-8 md:mt-0 relative">
+            {/* Main Image Container with rounded corners on top-left & bottom-right */}
+            <div
+              className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-md lg:h-112 xl:w-lg xl:h-128
+      overflow-hidden border-4 border-gray-400"
+              style={{
+                borderRadius: "2rem 0 2rem 0", // top-left & bottom-right rounded
+              }}
+            >
               <Image
                 height={800}
                 width={800}
                 src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
                 alt="profile"
-                className="w-full h-full object-cover rounded-full border-4 border-gray-400"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Larger Overlapping Image with heavy rounding top-right & bottom-left */}
+            <div
+              className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64
+      overflow-hidden border-4 border-gray-300 shadow-lg"
+              style={{
+                borderRadius: "0 4rem 0 4rem", // heavy rounding top-right & bottom-left
+                transform: "translate(40%, -40%)", // slight overlap outside main image
+                backgroundColor: "#f0f0f0", // subtle background behind image for visual separation
+              }}
+            >
+              <Image
+                height={400}
+                width={400}
+                src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
+                alt="profile small overlay"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
