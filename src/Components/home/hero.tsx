@@ -12,7 +12,7 @@ const Hero = () => {
           {/* LEFT COLUMN */}
           <div className="md:w-1/2 text-center md:text-left">
             {/* Small heading */}
-            <p className="tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl text-gray-400 mb-7 sm:mb-8 -mt-2 sm:-mt-4">
+            <p className="tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl text-gray-400 mb-8 sm:mb-11 -mt-4 sm:-mt-4">
               ✦ HELLO...!
             </p>
 
