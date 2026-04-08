@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 type Props = {
   open: boolean;
   setOpen: (value: boolean) => void;
@@ -32,41 +34,45 @@ export default function Sidebar({ open, setOpen }: Props) {
 
         {/* MENU ITEMS */}
         <div className="flex flex-col h-full justify-center items-center gap-8 text-lg font-semibold tracking-wide">
-          <a
-            href="#"
+          <Link
+            href="/"
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
             HOME
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            href="/about"
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
             ABOUT
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            href="/projects"
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
             PORTFOLIO
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            href="/blogs"
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
             BLOG
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            href="/contact"
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
             CONTACTS
-          </a>
+          </Link>
         </div>
       </div>
     </>
