@@ -33,8 +33,8 @@ const Hero = () => {
               <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
                 {/* Primary Button: Hire Me */}
                 <button
-                  className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 text-black font-bold py-3 px-6 rounded-full 
-             hover:bg-gradient-to-r hover:from-gray-300 hover:via-gray-400 hover:to-gray-500 
+                  className="bg-linear-to-r from-gray-200 via-gray-300 to-gray-400 text-black font-bold py-3 px-6 rounded-full 
+             hover:bg-linear-to-r hover:from-gray-300 hover:via-gray-400 hover:to-gray-500 
              hover:text-white transition-all duration-300 text-lg sm:text-xl w-full sm:w-auto"
                 >
                   Hire Me
@@ -42,8 +42,8 @@ const Hero = () => {
 
                 {/* Secondary Button: Download CV */}
                 <button
-                  className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 text-black font-bold py-3 px-6 rounded-full 
-             hover:bg-gradient-to-r hover:from-gray-300 hover:via-gray-400 hover:to-gray-500 
+                  className="bg-linear-to-r from-gray-200 via-gray-300 to-gray-400 text-black font-bold py-3 px-6 rounded-full 
+             hover:bg-linear-to-r hover:from-gray-300 hover:via-gray-400 hover:to-gray-500 
              hover:text-white transition-all duration-300 text-lg sm:text-xl w-full sm:w-auto"
                 >
                   Download CV
