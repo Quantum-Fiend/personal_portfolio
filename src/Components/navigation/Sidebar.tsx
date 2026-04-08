@@ -14,7 +14,7 @@ export default function Sidebar({ open, setOpen }: Props) {
       <div
         onClick={() => setOpen(false)}
         className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-all duration-300 ${
-          open ? "opacity-100 visible" : "opacity-0 invisible"
+          open ? "opacity-100 visible" : "opacity-0 invisible w-full"
         }`}
       />
 
@@ -55,7 +55,7 @@ export default function Sidebar({ open, setOpen }: Props) {
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
-            PORTFOLIO
+            PROJECTS
           </Link>
 
           <Link
@@ -63,7 +63,7 @@ export default function Sidebar({ open, setOpen }: Props) {
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
-            BLOG
+            BLOGS
           </Link>
 
           <Link
@@ -71,7 +71,7 @@ export default function Sidebar({ open, setOpen }: Props) {
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
-            CONTACTS
+            CONTACT
           </Link>
         </div>
       </div>
