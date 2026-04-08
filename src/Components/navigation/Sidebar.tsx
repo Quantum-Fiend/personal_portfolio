@@ -18,7 +18,7 @@ export default function Sidebar({ open, setOpen }: Props) {
 
       {/* SIDEBAR PANEL */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] sm:w-[320px] bg-[#0d0d0d] z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-70 sm:w-80 bg-[#0d0d0d] z-50 transform transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

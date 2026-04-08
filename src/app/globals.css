@@ -8,26 +8,3 @@ body {
 	background-color: black;
 	color: white;
 }
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -100%;   /* ❗ hidden by default */
-  width: 320px;
-  height: 100vh;
-  background: #0d0d0d;
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  padding-right: 60px;
-
-  transition: right 0.3s ease;
-  z-index: 1002;
-}
-
-/* ✅ only visible when open */
-.sidebar.open {
-  right: 0;
-}
