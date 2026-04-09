@@ -22,6 +22,23 @@ const Hero = () => {
               TUSHAR SINGH
             </h1>
 
+            <h2
+              className="
+   				 mt-3
+   				 bg-linear-to-r from-white via-gray-200 to-gray-400
+   				 text-transparent bg-clip-text
+   				 font-semibold
+   				 py-3 px-6
+   				 rounded-full
+   				 max-w-max
+   				 mx-auto sm:mx-0
+   				 text-lg sm:text-xl
+   				 border border-white/20
+  "
+            >
+              Software Engineer | Full Stack Engineer
+            </h2>
+
             {/* Description */}
             <p className="mt-6 sm:mt-8 text-gray-400 max-w-md sm:text-lg md:text-xl leading-relaxed mx-auto md:mx-0">
               I’m a Full Stack Software Developer and Engineer passionate about
