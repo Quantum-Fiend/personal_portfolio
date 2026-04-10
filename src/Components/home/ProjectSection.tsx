@@ -47,7 +47,7 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <section className="w-full text-white py-24 px-6 md:px-12">
+    <section className="w-full bg-zinc-950 text-white py-28 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         {/* HEADER */}
         <motion.div
@@ -76,8 +76,11 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative w-full max-w-sm"
             >
+              {/* glow border effect */}
+              <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-sm" />
+
               {/* CARD */}
-              <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl shadow-lg hover:shadow-purple-500/10 transition-all duration-500">
+              <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl shadow-lg transition-all duration-500 group-hover:shadow-purple-500/10">
                 {/* IMAGE */}
                 <div className="relative h-52 w-full overflow-hidden">
                   <Image
@@ -87,13 +90,12 @@ export default function ProjectsSection() {
                     className="object-cover group-hover:scale-110 transition duration-500"
                   />
 
-                  {/* overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 </div>
 
                 {/* CONTENT */}
                 <div className="p-5">
-                  <h3 className="text-xl font-semibold group-hover:text-white">
+                  <h3 className="text-xl font-semibold group-hover:text-white transition">
                     {project.title}
                   </h3>
 
@@ -114,7 +116,7 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* LINKS */}
-                  <div className="flex items-center gap-5 mt-5">
+                  <div className="flex items-center gap-5 mt-6">
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
@@ -138,12 +140,20 @@ export default function ProjectsSection() {
                     )}
                   </div>
                 </div>
-
-                {/* hover glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500/10 via-transparent to-blue-500/10 pointer-events-none" />
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* SEE MORE BUTTON */}
+        <div className="flex justify-center mt-16">
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-10 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
+          >
+            See More Projects →
+          </motion.button>
         </div>
       </div>
     </section>

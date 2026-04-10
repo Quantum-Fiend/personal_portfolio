@@ -101,7 +101,7 @@ export default function About() {
             hover:bg-linear-to-r hover:from-gray-300 hover:via-gray-400 hover:to-gray-500 
             hover:text-white transition-all duration-300 text-lg w-full sm:w-auto"
           >
-            Explore More
+            Explore More →
           </motion.button>
         </motion.div>
       </div>
