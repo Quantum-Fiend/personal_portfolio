@@ -46,8 +46,8 @@ export default function ShootingStars() {
             left: `${star.left}%`,
             height: `${star.size}px`,
           }}
-          className="absolute top-0 w-[2px] 
-             bg-gradient-to-b from-white via-gray-200 to-transparent 
+          className="absolute top-0 w-0.5 
+             bg-linear-to-b from-white via-gray-200 to-transparent 
              blur-[1.5px]"
         />
       ))}
@@ -68,7 +68,7 @@ export default function ShootingStars() {
             left: `${dot.left}%`,
             top: `${dot.top}%`,
           }}
-          className="absolute w-[2px] h-[2px] bg-white rounded-full"
+          className="absolute w-0.5 h-0.5 bg-white rounded-full"
         />
       ))}
     </div>

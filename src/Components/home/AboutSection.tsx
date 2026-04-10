@@ -7,11 +7,11 @@ export default function About() {
   return (
     <section className="relative py-28 px-6 flex justify-center overflow-hidden">
       {/* 🌌 SOFT GLOBAL GLOW */}
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-white/5 blur-[160px] rounded-full" />
-      <div className="absolute bottom-[-20%] right-1/2 translate-x-1/2 w-[400px] h-[400px] bg-gray-500/10 blur-[160px] rounded-full" />
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-125 h-125 bg-white/5 blur-[160px] rounded-full" />
+      <div className="absolute bottom-[-20%] right-1/2 translate-x-1/2 w-100 h-100 bg-gray-500/10 blur-[160px] rounded-full" />
 
       {/* GRID (VERY SUBTLE) */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:40px_40px]" />
+      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-size-[40px_40px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
         {/* HEADING */}
@@ -22,12 +22,12 @@ export default function About() {
           className="mb-14"
         >
           <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight">
-            <span className="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
               About Me
             </span>
           </h1>
 
-          <div className="w-20 h-[2px] bg-gradient-to-r from-white/60 to-transparent mx-auto mt-4" />
+          <div className="w-20 h-0.5 bg-linear-to-r from-white/60 to-transparent mx-auto mt-4" />
         </motion.div>
 
         {/* IMAGE */}
@@ -38,11 +38,11 @@ export default function About() {
           className="relative mb-14"
         >
           {/* glow behind image */}
-          <div className="absolute inset-0 w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] bg-white/5 blur-[120px] rounded-full mx-auto" />
+          <div className="absolute inset-0 w-[320px] h-80 sm:w-95 sm:h-95 bg-white/5 blur-[120px] rounded-full mx-auto" />
 
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="relative z-10 w-[260px] sm:w-[340px] md:w-[420px] overflow-hidden rounded-[40px_0_40px_0] border border-white/10"
+            className="relative z-10 w-65 sm:w-85 md:w-105 overflow-hidden rounded-[40px_0_40px_0] border border-white/10"
           >
             <Image
               src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
@@ -74,7 +74,7 @@ export default function About() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="mt-8 px-6 py-3 rounded-full bg-gradient-to-r from-white to-gray-300 text-black font-medium hover:opacity-90 transition"
+            className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white to-gray-300 text-black font-medium hover:opacity-90 transition"
           >
             Explore More →
           </motion.button>
