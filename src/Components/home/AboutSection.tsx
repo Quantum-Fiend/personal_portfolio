@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="relative bg-black text-white py-32 px-6 overflow-hidden flex justify-center">
+    <section className="relative py-32 px-6 overflow-hidden flex justify-center">
       {/* 🌌 Glow Background */}
       <div className="absolute -top-50 left-1/2 -translate-x-1/2 w-150 h-150white/10 blur-[160px] rounded-full"></div>
       <div className="absolute -bottom-62.5 right-1/2 translate-x-1/2 w-137.5 h-137.5 bg-gray-500/10 blur-[180px] rounded-full"></div>
@@ -53,8 +53,6 @@ export default function About() {
               height={1000}
               className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
             />
-
-            <div className="absolute inset-0 bg-black/30"></div>
           </motion.div>
 
           {/* Floating UI */}

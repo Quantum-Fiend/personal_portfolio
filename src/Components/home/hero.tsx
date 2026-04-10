@@ -37,7 +37,7 @@ const Hero = () => {
   }, []);
    const [position, setPosition] = useState({ x: 0, y: 0 });
   return (
-    <section className="w-full min-h-screen bg-black text-white flex items-center px-6 sm:px-12 md:px-24 lg:px-32">
+    <section className="w-full min-h-screen flex items-center px-6 sm:px-12 md:px-24 lg:px-32">
       {/* Container */}
       <div className="w-full max-w-300 mx-auto">
         {/* Row */}

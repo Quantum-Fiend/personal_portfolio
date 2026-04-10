@@ -47,7 +47,7 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <section className="w-full bg-zinc-950 text-white py-28 px-6 md:px-12">
+    <section className="w-full py-28 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         {/* HEADER */}
         <motion.div

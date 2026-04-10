@@ -27,7 +27,7 @@ export default function ContactCTA() {
   }
 
   return (
-    <section className="relative w-full overflow-hidden py-32 px-6 bg-black">
+    <section className="relative w-full overflow-hidden py-32 px-6">
       {/* =========================
           BACKGROUND SYSTEM
       ========================= */}

@@ -5,6 +5,7 @@ import Header from "@/Components/layouts/header";
 import SocialBar from "@/Components/ui/SocialBar";
 import SplashCursor from "@/Components/ui/SplashCursor";
 import Footer from "@/Components/layouts/footer";
+import ShootingStarsBackground from "@/Components/ui/ShootingStarEffect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,12 +32,20 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        <SplashCursor />
-        <SocialBar />
-        {children}
-        <Footer />
+      <body>
+        {/* BACKGROUND LAYER (ALWAYS FIRST) */}
+        <ShootingStarsBackground />
+
+        {/* APP LAYER */}
+        <div id="app-root">
+          <Header />
+          <SplashCursor />
+          <SocialBar />
+
+          <main>{children}</main>
+
+          <Footer />
+        </div>
       </body>
     </html>
   );
