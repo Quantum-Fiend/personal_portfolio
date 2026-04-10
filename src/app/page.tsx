@@ -4,6 +4,7 @@ import Hero from "@/Components/home/Hero";
 import Skills from "@/Components/home/SkillsSection";
 import ProjectSection from "@/Components/home/ProjectSection";
 import BlogsSection from "@/Components/home/BlogSection";
+import ContactCTA from "@/Components/home/CallToActionSection";
 
 
 const page = () => {
@@ -14,6 +15,7 @@ const page = () => {
       <Skills />
       <ProjectSection />
       <BlogsSection />
+	  <ContactCTA />
     </div>
   );
 };
