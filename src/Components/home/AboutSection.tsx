@@ -5,99 +5,76 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="relative py-32 px-6 overflow-hidden flex justify-center">
-      {/* 🌌 Glow Background */}
-      <div className="absolute -top-50 left-1/2 -translate-x-1/2 w-150 h-150white/10 blur-[160px] rounded-full"></div>
-      <div className="absolute -bottom-62.5 right-1/2 translate-x-1/2 w-137.5 h-137.5 bg-gray-500/10 blur-[180px] rounded-full"></div>
+    <section className="relative py-28 px-6 flex justify-center overflow-hidden">
+      {/* 🌌 SOFT GLOBAL GLOW */}
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-white/5 blur-[160px] rounded-full" />
+      <div className="absolute bottom-[-20%] right-1/2 translate-x-1/2 w-[400px] h-[400px] bg-gray-500/10 blur-[160px] rounded-full" />
 
-      {/* Grid */}
-      <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-size-[35px_35px]"></div>
+      {/* GRID (VERY SUBTLE) */}
+      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:40px_40px]" />
 
-      <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center text-center">
-        {/* ✨ Heading */}
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
+        {/* HEADING */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="mb-16 flex flex-col items-center"
+          transition={{ duration: 0.6 }}
+          className="mb-14"
         >
-          <h1 className="text-5xl sm:text-6xl font-bold tracking-wide mb-10">
-            <span className="bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight">
+            <span className="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
               About Me
             </span>
           </h1>
 
-          <div className="w-24 h-0.5 bg-linear-to-r from-gray-300 to-transparent mt-3"></div>
+          <div className="w-20 h-[2px] bg-gradient-to-r from-white/60 to-transparent mx-auto mt-4" />
         </motion.div>
 
-        {/* 🖼️ IMAGE */}
+        {/* IMAGE */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative flex justify-center mb-14"
+          transition={{ duration: 0.7 }}
+          className="relative mb-14"
         >
-          {/* Glow */}
-          <div className="absolute w-105 h-105 bg-white/10 blur-[130px] rounded-full"></div>
+          {/* glow behind image */}
+          <div className="absolute inset-0 w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] bg-white/5 blur-[120px] rounded-full mx-auto" />
 
           <motion.div
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.4 }}
-            className="relative z-10 w-65 sm:w-85 md:w-112.5
-            overflow-hidden rounded-[2.5rem_0_2.5rem_0] border border-gray-700"
+            whileHover={{ scale: 1.02 }}
+            className="relative z-10 w-[260px] sm:w-[340px] md:w-[420px] overflow-hidden rounded-[40px_0_40px_0] border border-white/10"
           >
             <Image
               src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
               alt="about"
               width={1000}
               height={1000}
-              className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
           </motion.div>
-
-          {/* Floating UI */}
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="absolute -top-10 -right-11 w-30 h-30
-            bg-white/5 border border-gray-700 backdrop-blur-xl rounded-[0_2rem_0_2rem]
-            flex items-center justify-center text-xs text-gray-300"
-          ></motion.div>
-
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity }}
-            className="absolute -bottom-10 -left-11 w-30 h-30
-            bg-white/5 border border-gray-700 backdrop-blur-xl rounded-[0_2rem_0_2rem]
-            flex items-center justify-center text-xs text-gray-300"
-          ></motion.div>
         </motion.div>
 
-        {/* 🧠 TEXT */}
+        {/* TEXT CARD */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-white/5 backdrop-blur-xl border border-gray-800 rounded-3xl p-8 sm:p-10 max-w-2xl"
+          transition={{ duration: 0.7 }}
+          className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-10 max-w-2xl"
         >
-          <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
-            I’m a Full Stack Developer passionate about crafting futuristic,
-            high-performance digital experiences with modern UI systems.
+          <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+            I’m a Full Stack Developer focused on building modern,
+            high-performance, and visually refined digital experiences.
           </p>
 
-          <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed">
-            I specialize in building scalable applications using Next.js,
-            TypeScript, Tailwind CSS, and motion-driven interfaces that feel
-            alive.
+          <p className="mt-5 text-gray-400 text-sm sm:text-base leading-relaxed">
+            I work with Next.js, TypeScript, Tailwind CSS, and motion-driven UI
+            systems to create interfaces that feel alive and intentional.
           </p>
 
-          {/* Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-10 bg-linear-to-r from-gray-200 via-gray-300 to-gray-400 text-black font-bold py-3 px-6 rounded-full 
-            hover:bg-linear-to-r hover:from-gray-300 hover:via-gray-400 hover:to-gray-500 
-            hover:text-white transition-all duration-300 text-lg w-full sm:w-auto"
+            whileTap={{ scale: 0.97 }}
+            className="mt-8 px-6 py-3 rounded-full bg-gradient-to-r from-white to-gray-300 text-black font-medium hover:opacity-90 transition"
           >
             Explore More →
           </motion.button>

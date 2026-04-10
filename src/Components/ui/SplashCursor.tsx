@@ -17,7 +17,7 @@ export default function SplashCursor() {
   return (
     <div className="pointer-events-none fixed inset-0 z-10">
       <div
-        className="absolute w-170 h-170 rounded-full blur-5xl opacity-100 transition-transform duration-100 ease-out"
+        className="absolute w-170 h-170 rounded-full blur-5xl opacity-60 transition-transform duration-100 ease-out"
         style={{
           transform: `translate(${pos.x - 250}px, ${pos.y - 250}px)`,
           background:
