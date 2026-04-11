@@ -73,7 +73,7 @@ export default function Footer() {
             </span>
           </h2>
         </motion.div>
-
+        small
         {/* =========================
             NAV LINKS (CENTERED)
         ========================= */}
@@ -91,7 +91,6 @@ export default function Footer() {
             </a>
           ))}
         </div>
-
         {/* =========================
             SOCIAL ICONS (CENTERED)
         ========================= */}
@@ -118,16 +117,14 @@ export default function Footer() {
             <MailIcon />
           </motion.a>
         </div>
-
         {/* =========================
             DIVIDER
         ========================= */}
         <div className="w-full h-px bg-white/10 my-12" />
-
         {/* =========================
             BOTTOM
         ========================= */}
-        <div className="flex flex-col md:flex-row justify-center items-center w-full text-xs text-gray-200 gap-4">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full text-xs text-gray-200 gap-4 mb-8 md:mb-0">
           <p>© {new Date().getFullYear()} Tushar Singh Bisht 💫</p>
         </div>
       </div>

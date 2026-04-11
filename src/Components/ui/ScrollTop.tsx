@@ -42,7 +42,7 @@ export default function ScrollToTop() {
         fixed 
         bottom-24 sm:bottom-10 
         right-3 sm:right-6 md:right-10 
-        z-[999]
+        z-999
       "
     >
       <div className="relative flex items-center justify-center">
