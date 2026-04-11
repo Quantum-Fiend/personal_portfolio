@@ -73,7 +73,6 @@ export default function Footer() {
             </span>
           </h2>
         </motion.div>
-        small
         {/* =========================
             NAV LINKS (CENTERED)
         ========================= */}
