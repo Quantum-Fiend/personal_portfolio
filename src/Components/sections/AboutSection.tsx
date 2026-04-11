@@ -59,8 +59,8 @@ export default function AboutSection() {
       <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[90px_90px]" />
 
       {/* FLOATING ENERGY LAYERS */}
-      <div className="absolute top-[-180px] left-[-180px] w-[600px] h-[600px] bg-white/10 blur-3xl rounded-full animate-pulse" />
-      <div className="absolute bottom-[-200px] right-[-200px] w-[700px] h-[700px] bg-gray-400/10 blur-3xl rounded-full animate-pulse" />
+      <div className="absolute -top-45 -left-45 w-150 h-150 bg-white/10 blur-3xl rounded-full animate-pulse" />
+      <div className="absolute -bottom-50 -right-50 w-175 h-175 bg-gray-400/10 blur-3xl rounded-full animate-pulse" />
 
       <div className="relative max-w-6xl mx-auto space-y-28">
         {/* 🔥 HERO */}
@@ -115,7 +115,7 @@ export default function AboutSection() {
           >
             {/* PREMIUM LIGHT SWEEP */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
-              <div className="absolute -inset-[200px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25),transparent_55%)] blur-3xl" />
+              <div className="absolute -inset-50 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25),transparent_55%)] blur-3xl" />
             </div>
 
             <FiBriefcase className="text-gray-200 text-2xl mb-5 mx-auto" />
@@ -144,8 +144,8 @@ export default function AboutSection() {
               >
                 {/* STRONG PREMIUM GLOW */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
-                  <div className="absolute inset-[-60px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.22),transparent_60%)] blur-3xl" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
+                  <div className="absolute -inset-15 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.22),transparent_60%)] blur-3xl" />
+                  <div className="absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-transparent" />
                 </div>
 
                 {/* ICON */}
@@ -177,7 +177,7 @@ export default function AboutSection() {
         >
           {/* STRONG BACKGROUND ENERGY */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
-            <div className="absolute inset-[-80px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.18),transparent_60%)] blur-3xl" />
+            <div className="absolute -inset-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.18),transparent_60%)] blur-3xl" />
           </div>
 
           <h3 className="text-xl font-semibold text-gray-200">
