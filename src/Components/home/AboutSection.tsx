@@ -27,7 +27,7 @@ export default function About() {
             </span>
           </h1>
 
-          <div className="w-20 h-0.5 bg-linear-to-r from-white/60 to-transparent mx-auto mt-4" />
+          <div className="w-30 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
         </motion.div>
 
         {/* IMAGE */}

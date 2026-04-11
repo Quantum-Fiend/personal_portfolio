@@ -92,6 +92,7 @@ export default function AboutSection() {
             <h2 className="text-3xl font-semibold">
               I’m <span className="text-gray-400">Tushar Singh</span>
             </h2>
+            <div className="w-48 sm:w-28 md:w-32 h-0.5 bg-linear-to-r from-white/70 to-transparent mt-4 mx-auto lg:mx-0"></div>
 
             <p className="mt-6 text-gray-400 text-sm sm:text-base leading-relaxed">
               Full-stack developer focused on building scalable systems, modern
@@ -183,6 +184,7 @@ export default function AboutSection() {
           <h3 className="text-xl font-semibold text-gray-200">
             Engineering Mindset
           </h3>
+          <div className="w-48 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
 
           <p className="text-gray-400 mt-5 text-sm leading-relaxed">
             I focus on building scalable, fast, and intuitive systems where

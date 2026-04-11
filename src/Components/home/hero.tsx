@@ -47,6 +47,7 @@ const Hero = () => {
             {/* Small heading */}
             <p className="tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl text-gray-400 mb-8 sm:mb-11 -mt-4 sm:-mt-4">
               ✦ HELLO...!
+              <div className="w-26 sm:w-28 md:w-32 h-0.5 bg-linear-to-r from-white/70 to-transparent mt-4 mx-auto lg:mx-0"></div>
             </p>
 
             {/* Big Heading */}

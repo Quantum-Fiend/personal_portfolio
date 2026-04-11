@@ -62,7 +62,7 @@ export default function ProjectsSection() {
             </span>
           </h2>
 
-          <div className="w-28 h-0.5 bg-linear-to-r from-gray-300 to-transparent mx-auto" />
+          <div className="w-30 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
         </motion.div>
 
         {/* GRID */}
