@@ -96,7 +96,7 @@ export default function Footer() {
         <div className="mt-10 flex justify-center gap-6">
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
-            href="https://github.com/Quantum-Fiend?tab=repositories"
+            href="https://github.com/Quantum-Fiend"
             className="p-3 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/30 transition"
           >
             <GitHubIcon />

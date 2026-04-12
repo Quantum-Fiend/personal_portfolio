@@ -19,10 +19,7 @@ export default function SocialBar() {
         >
           <FaLinkedinIn />
         </a>
-        <a
-          href="https://github.com/Quantum-Fiend?tab=repositories"
-          className="icon github"
-        >
+        <a href="https://github.com/Quantum-Fiend" className="icon github">
           <FaGithub />
         </a>
         <a href="1320766944164708352" className="icon discord">

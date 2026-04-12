@@ -14,7 +14,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="relative bg-black text-white py-36 px-6 overflow-hidden">
+    <section className="relative py-36 px-6 overflow-hidden">
       {/* 🌌 MULTI LAYER BACKGROUND GLOW */}
       <div className="absolute inset-0">
         <div className="absolute -top-40 -left-40 w-125 h-125 bg-white/10 blur-[160px] rounded-full animate-pulse" />

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -71,13 +72,15 @@ export default function About() {
             systems to create interfaces that feel alive and intentional.
           </p>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white to-gray-300 text-black font-medium hover:opacity-90 transition"
-          >
-            Explore More →
-          </motion.button>
+          <Link href="/about">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white to-gray-300 text-black font-medium hover:opacity-90 transition"
+            >
+              Explore More →
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
