@@ -3,7 +3,7 @@ import AboutSection from "@/Components/home/AboutSection";
 import Hero from "@/Components/home/Hero";
 import Skills from "@/Components/home/SkillsSection";
 import ProjectSection from "@/Components/home/ProjectSection";
-import BlogsSection from "@/Components/home/BlogSection";
+import ArticleSection from "@/Components/home/ArticleSection";
 //import ContactCTA from "@/Components/home/CallToActionSection";
 
 
@@ -14,7 +14,7 @@ const page = () => {
       <AboutSection />
       <Skills />
       <ProjectSection />
-      <BlogsSection />
+      <ArticleSection />
       {/*<ContactCTA />*/}
     </div>
   );

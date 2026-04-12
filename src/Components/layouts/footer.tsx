@@ -77,7 +77,7 @@ export default function Footer() {
             NAV LINKS (CENTERED)
         ========================= */}
         <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-10 text-sm">
-          {["Home", "About", "Projects", "Blogs", "Contact"].map((item) => (
+          {["Home", "About", "Projects", "Articles", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
