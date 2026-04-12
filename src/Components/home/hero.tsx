@@ -10,6 +10,7 @@ const Hero = () => {
 
   const [displayedText, setDisplayedText] = useState("");
   const [displayedName, setDisplayedName] = useState("");
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     let i = 0;
@@ -28,6 +29,7 @@ const Hero = () => {
             j++;
           } else {
             clearInterval(interval2);
+			setDone(true);
           }
         }, 70);
       }
@@ -60,7 +62,7 @@ const Hero = () => {
               {displayedText}
               <br />
               {displayedName}
-              <span className="animate-pulse">|</span>
+              <span className={done ? "opacity-0" : "animate-pulse"}>|</span>
             </motion.h1>
 
             <h2
