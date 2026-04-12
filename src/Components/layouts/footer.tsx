@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 /* =========================
    SVG ICONS (SAFE)
@@ -77,17 +78,23 @@ export default function Footer() {
             NAV LINKS (CENTERED)
         ========================= */}
         <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-10 text-sm">
-          {["Home", "About", "Projects", "Articles", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Projects", path: "/projects" },
+            { name: "Articles", path: "/articles" },
+            { name: "Contact", path: "/contact" },
+          ].map((item) => (
+            <Link
+              key={item.name}
+              href={item.path}
               className="relative group text-zinc-400 hover:text-white transition"
             >
-              {item}
+              {item.name}
 
               {/* underline */}
               <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-linear-to-r from-emerald-400 to-cyan-400 transition-all duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
         </div>
         {/* =========================
