@@ -218,7 +218,7 @@ export default function AboutSection() {
             <div className="absolute -inset-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.18),transparent_60%)] blur-3xl" />
           </div>
 
-          <h3 className="text-xl font-semibold text-gray-200">
+          <h3 className="text-2xl font-bold bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
             Engineering Mindset
           </h3>
 
