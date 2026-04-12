@@ -120,8 +120,7 @@ export default function ContactSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="w-full max-w-md py-4 rounded-xl bg-white text-black font-semibold
-                 hover:shadow-[0_0_60px_rgba(255,255,255,0.25)] transition"
+              className="px-10 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg w-96"
             >
               Send Message <FiSend className="inline ml-2" />
             </motion.button>

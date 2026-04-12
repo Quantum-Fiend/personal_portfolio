@@ -140,10 +140,7 @@ export default function ArticlesPage() {
 
               {/* BUTTON */}
               <div className="mt-6 flex justify-center">
-                <button
-                  className="px-5 py-2 text-sm rounded-full bg-white text-black font-medium
-                                 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition"
-                >
+                <button className="px-10 py-3 rounded-full bg-linear-to-r from-white via-gray-350 to-gray-500 text-black font-semibold shadow-lg">
                   Read Article →
                 </button>
               </div>
@@ -153,11 +150,11 @@ export default function ArticlesPage() {
 
         {/* 🔗 CTA */}
         <div className="pt-10 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-300 text-sm">
             More deep engineering content coming soon ⚡
           </p>
 
-          <p className="text-gray-600 text-xs mt-2">
+          <p className="text-gray-400 text-xs mt-2">
             Follow me on GitHub & LinkedIn for updates
           </p>
         </div>
