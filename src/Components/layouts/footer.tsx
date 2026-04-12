@@ -63,7 +63,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
             Let’s build something
             <br />
             <span className="relative inline-block">
@@ -77,7 +77,7 @@ export default function Footer() {
         {/* =========================
             NAV LINKS (CENTERED)
         ========================= */}
-        <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-10 text-sm">
+        <div className="mt-12 flex flex-wrap justify-center gap-5 md:gap-10">
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
@@ -88,7 +88,7 @@ export default function Footer() {
             <Link
               key={item.name}
               href={item.path}
-              className="relative group text-zinc-400 hover:text-white transition"
+              className="relative group text-zinc-300 hover:text-white transition duration-75 ease-linear font-semibold"
             >
               {item.name}
 
