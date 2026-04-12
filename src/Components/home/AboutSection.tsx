@@ -2,48 +2,82 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function About() {
-  return (
-    <section className="relative py-28 px-6 flex justify-center overflow-hidden">
-      {/* 🌌 SOFT GLOBAL GLOW */}
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-125 h-125 bg-white/5 blur-[160px] rounded-full" />
-      <div className="absolute bottom-[-20%] right-1/2 translate-x-1/2 w-100 h-100 bg-gray-500/10 blur-[160px] rounded-full" />
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
-      {/* GRID (VERY SUBTLE) */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-size-[40px_40px]" />
+  const smoothX = useSpring(x, { stiffness: 80, damping: 20 });
+  const smoothY = useSpring(y, { stiffness: 80, damping: 20 });
+
+  return (
+    <section className="relative py-32 px-6 flex justify-center overflow-hidden">
+      {/* 🌌 COLORFUL GRADIENT BACKGROUND */}
+      <div className="absolute inset-0 bg-linear-to-br from-purple-500/10 via-transparent to-blue-500/10 blur-3xl" />
+
+      {/* GRID */}
+      <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-size-[35px_35px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
-        {/* HEADING */}
+        {/* 🔥 TITLE (UNCHANGED) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="mb-14"
         >
           <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight">
             <span className="bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
               About Me
             </span>
+            <div className="w-30 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
           </h1>
-
-          <div className="w-30 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
         </motion.div>
 
-        {/* IMAGE */}
+        {/* 🧠 FLOATING BADGES */}
+        <div className="flex flex-wrap gap-3 justify-center mb-12">
+          {["Next.js", "TypeScript", "Full Stack", "UI/UX"].map((tag, i) => (
+            <motion.span
+              key={tag}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ scale: 1.1 }}
+              className="px-4 py-1 text-xs rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white/80"
+            >
+              {tag}
+            </motion.span>
+          ))}
+        </div>
+
+        {/* 📸 IMAGE WITH GLOW RING */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="relative mb-14"
+          className="relative mb-16"
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            x.set(e.clientX - rect.left);
+            y.set(e.clientY - rect.top);
+          }}
         >
-          {/* glow behind image */}
-          <div className="absolute inset-0 w-[320px] h-80 sm:w-95 sm:h-95 bg-white/5 blur-[120px] rounded-full mx-auto" />
+          {/* 🔥 GLOW RING */}
+          <div className="absolute inset-0 rounded-[40px] bg-linear-to-r from-purple-500 via-blue-500 to-transparent blur-2xl opacity-30 animate-pulse" />
+
+          {/* 🖱️ CURSOR LIGHT */}
+          <motion.div
+            className="absolute pointer-events-none w-75 h-75 rounded-full bg-white/20 blur-[120px]"
+            style={{
+              x: smoothX,
+              y: smoothY,
+              translateX: "-50%",
+              translateY: "-50%",
+            }}
+          />
 
           <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="relative z-10 w-65 sm:w-85 md:w-105 overflow-hidden rounded-[40px_0_40px_0] border border-white/10"
+            whileHover={{ scale: 1.06, rotate: 1 }}
+            transition={{ type: "spring", stiffness: 120 }}
+            className="relative z-10 w-80 md:w-3xl h-80 md:h-90 overflow-hidden rounded-[40px] border border-white/10 shadow-2xl"
           >
             <Image
               src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
@@ -55,14 +89,18 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        {/* TEXT CARD */}
+        {/* 🧾 PREMIUM CARD */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-10 max-w-2xl"
+          transition={{ duration: 0.8 }}
+          whileHover={{ scale: 1.04 }}
+          className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 sm:p-10 max-w-2xl overflow-hidden"
         >
-          <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+          {/* 🔥 HOVER GLOW */}
+          <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-700 bg-linear-to-r from-purple-500/10 via-transparent to-blue-500/10" />
+
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
             I’m a Full Stack Developer focused on building modern,
             high-performance, and visually refined digital experiences.
           </p>
@@ -72,13 +110,17 @@ export default function About() {
             systems to create interfaces that feel alive and intentional.
           </p>
 
+          {/* 🚀 BUTTON */}
           <Link href="/about">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white to-gray-400 text-black font-medium hover:opacity-90 transition"
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0px 0px 30px rgba(139,92,246,0.4)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
             >
-              Explore More →
+              More About Me →
             </motion.button>
           </Link>
         </motion.div>
