@@ -1,6 +1,6 @@
 "use client";
 import PageBanner from "@/Components/sections/PageBanner";
-import ArticlesSection from "@/Components/ui/ArticlesSection";
+import ArticlesSection from "@/Components/sections/ArticlesSection";
 
 const page = () => {
   return (

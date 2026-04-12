@@ -5,9 +5,9 @@ import { FiMail, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
 
 export default function ContactSection() {
   return (
-    <section className="relative w-full py-36 px-6 overflow-hidden text-white">
+    <section className="relative w-full py-36 px-6 overflow-hidden">
       {/* 🌌 CINEMATIC BACKGROUND */}
-      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0" />
 
       <div className="absolute -top-50 -left-50 w-125 h-125 bg-white/10 blur-[140px] rounded-full" />
       <div className="absolute -bottom-50 -right-50 w-125 h-125 bg-gray-400/10 blur-[160px] rounded-full" />

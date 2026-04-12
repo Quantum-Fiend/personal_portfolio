@@ -68,9 +68,9 @@ const articles: Article[] = [
 
 export default function ArticlesPage() {
   return (
-    <section className="relative w-full py-32 px-6 overflow-hidden text-white">
+    <section className="relative w-full py-32 px-6 overflow-hidden">
       {/* 🌌 BACKGROUND */}
-      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 " />
 
       {/* glowing orbs */}
       <div className="absolute -top-62.5 -left-50 w-175 h-175 bg-white/10 blur-[200px] rounded-full" />
