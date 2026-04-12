@@ -47,9 +47,9 @@ const Hero = () => {
           {/* LEFT COLUMN */}
           <div className="md:w-1/2 text-center md:text-left">
             {/* Small heading */}
-            <p className="tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl text-gray-400 mb-8 sm:mb-11 -mt-4 sm:-mt-4">
+            <p className="tracking-[0.2em] text-2xl sm:text-3xl md:text-4xl text-gray-400 mb-8 sm:mb-11 -mt-4 sm:-mt-4">
               ✦ HELLO...!
-              <div className="w-26 sm:w-28 md:w-32 h-0.5 bg-linear-to-r from-white/70 to-transparent mt-4 mx-auto lg:mx-0"></div>
+              <span className="w-26 sm:w-28 md:w-32 h-0.5 bg-linear-to-r from-white/70 to-transparent mt-4 mx-auto lg:mx-0"/>
             </p>
 
             {/* Big Heading */}
@@ -57,7 +57,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text5xl lg:text-6xl font-bold md:leading-tight bg-linear-to-r from-white via-gray-400 to-gray-500 bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text5xl lg:text-7xl font-bold md:leading-tight bg-linear-to-r from-white via-gray-400 to-gray-500 bg-clip-text text-transparent"
             >
               {displayedText}
               <br />
