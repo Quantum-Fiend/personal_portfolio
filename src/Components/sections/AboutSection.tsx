@@ -5,7 +5,7 @@ import { IconType } from "react-icons";
 import {
   FiCode,
   FiLayers,
-  FiTool,
+  FiCpu,
   FiZap,
   FiBookOpen,
   FiTarget,
@@ -31,7 +31,7 @@ const cards: CardItem[] = [
     desc: "Designing scalable backend and modular systems.",
   },
   {
-    icon: FiTool,
+    icon: FiCpu,
     title: "Problem Solving",
     desc: "Breaking complex challenges into clean solutions.",
   },
@@ -91,6 +91,7 @@ export default function AboutSection() {
 
   return (
     <section className="relative w-full py-36 px-6 overflow-hidden">
+
       {/* 🌌 ULTRA PREMIUM BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)]" />
       <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[90px_90px]" />
@@ -196,6 +197,7 @@ export default function AboutSection() {
 
                 <h3 className="text-center text-gray-200 font-medium relative z-10">
                   {item.title}
+                  <div className="w-30 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
                 </h3>
 
                 <p className="text-center text-sm text-gray-400 mt-2 relative z-10">
