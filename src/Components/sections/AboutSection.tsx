@@ -23,32 +23,32 @@ const cards: CardItem[] = [
   {
     icon: FiCode,
     title: "Frontend Engineering",
-    desc: "Crafting smooth, interactive and responsive interfaces.",
+    desc: "Building fast, accessible and interactive user interfaces with attention to detail and UX flow.",
   },
   {
     icon: FiLayers,
     title: "System Architecture",
-    desc: "Designing scalable backend and modular systems.",
+    desc: "Designing scalable, modular systems with clean structure, maintainability, and long-term flexibility.",
   },
   {
     icon: FiCpu,
     title: "Problem Solving",
-    desc: "Breaking complex challenges into clean solutions.",
+    desc: "Deconstructing complex UI and system challenges into simple, structured, and maintainable solutions.",
   },
   {
     icon: FiZap,
     title: "Performance Focus",
-    desc: "Optimizing speed, UX flow, and rendering efficiency.",
+    desc: "Optimizing rendering, responsiveness, and user experience for fast and smooth interactions..",
   },
   {
     icon: FiBookOpen,
     title: "Continuous Growth",
-    desc: "Always learning modern tools and engineering patterns.",
+    desc: "Constantly exploring modern tools, frameworks, and engineering patterns to improve my craft",
   },
   {
     icon: FiTarget,
     title: "Vision",
-    desc: "Building impactful digital experiences that matter.",
+    desc: "Building meaningful digital products that combine clarity, usability, and strong engineering foundations.",
   },
 ];
 
@@ -91,7 +91,6 @@ export default function AboutSection() {
 
   return (
     <section className="relative w-full py-36 px-6 overflow-hidden">
-
       {/* 🌌 ULTRA PREMIUM BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)]" />
       <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[90px_90px]" />
@@ -110,11 +109,12 @@ export default function AboutSection() {
         >
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
             Building <span className="text-gray-400">Digital Systems</span>
+            <div className="w-30 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
           </h1>
 
           <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            I design and engineer high-performance web experiences with clarity,
-            scalability, and smooth interaction systems.
+            Crafting scalable digital systems with a strong focus on
+            performance, structure, and seamless human-centered interactions.
           </p>
         </motion.div>
 
@@ -134,8 +134,9 @@ export default function AboutSection() {
             <div className="w-48 sm:w-28 md:w-32 h-0.5 bg-linear-to-r from-white/70 to-transparent mt-4 mx-auto lg:mx-0"></div>
 
             <p className="mt-6 text-gray-400 text-sm sm:text-base leading-relaxed">
-              Full-stack developer focused on building scalable systems, modern
-              UI experiences, and performance-driven architecture.
+              Full-stack developer | Software developer focused on building
+              scalable systems, modern UI experiences, and performance-driven
+              architecture.
             </p>
 
             {/* 🔥 PREMIUM TYPING EFFECT (ONLY CHANGE HERE) */}
@@ -227,8 +228,8 @@ export default function AboutSection() {
           <div className="w-48 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-4"></div>
 
           <p className="text-gray-400 mt-5 text-sm leading-relaxed">
-            I focus on building scalable, fast, and intuitive systems where
-            every interaction feels intentional, smooth, and production-ready.
+            I build and engineer scalable software systems with a focus on
+            architecture, performance, and usability.
           </p>
         </motion.div>
       </div>
