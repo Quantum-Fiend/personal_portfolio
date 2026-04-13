@@ -170,11 +170,14 @@ export default function ProjectsSection() {
         <div className="flex justify-center mt-16">
           <Link href="/projects">
             <motion.button
-              whileHover={{ scale: 1.08 }}
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0px 0px 30px rgba(139,92,246,0.4)",
+              }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
+              className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
             >
-              See More Projects →
+              Explore More Projects →
             </motion.button>
           </Link>
         </div>
