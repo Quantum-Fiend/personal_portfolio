@@ -1,5 +1,5 @@
-import PageBanner from "@/Components/sections/PageBanner";
-import ProjectsSection from "@/Components/sections/ProjectSectin";
+import PageBanner from "@/components/sections/PageBanner";
+import ProjectsPage from "@/components/features/projects/ProjectsPage";
 
 const page = () => {
   return (
@@ -10,7 +10,7 @@ const page = () => {
         tag="Product Builder • Interface Engineer"
         subtitle="A collection of engineered digital products built with performance, interaction, and scalable architecture in mind."
       />
-      <ProjectsSection />
+      <ProjectsPage />
     </div>
   );
 };
