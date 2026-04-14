@@ -1,9 +1,7 @@
 import AboutSection from "@/components/features/home/about/AboutSection";
 import Hero from "@/components/features/home/Hero";
+import ProjectsSection from "@/components/features/home/project/ProjectsSection";
 import SkillsSection from "@/components/features/home/skills/SkillsSection";
-
-//import ProjectSection from "@/components/home/ProjectSection";
-//import ArticleSection from "@/components/home/ArticleSection";
 
 const page = () => {
   return (
@@ -11,8 +9,7 @@ const page = () => {
       <Hero />
       <AboutSection />
       <SkillsSection />
-      {/*<ProjectSection />
-      <ArticleSection />*/}
+      <ProjectsSection />
     </div>
   );
 };
