@@ -97,7 +97,7 @@ export default function ScrollToTop() {
         >
           {/* ✨ glass shine animation */}
           <motion.div
-            className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/10"
+            className="absolute inset-0 bg-linear-to-tr from-white/10 via-transparent to-white/10"
             animate={{ x: [-40, 40] }}
             transition={{
               repeat: Infinity,
