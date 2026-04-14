@@ -76,8 +76,7 @@ const Hero = () => {
    				 max-w-max
    				 mx-auto sm:mx-0
    				 text-lg sm:text-xl
-   				 border border-white/20
-  "
+   				 border border-white/20"
             >
               Software Engineer | Full Stack Engineer
             </h2>
