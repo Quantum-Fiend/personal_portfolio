@@ -1,5 +1,5 @@
-import PageBanner from "@/Components/sections/PageBanner";
-import AboutSection from "@/Components/sections/AboutSection";
+import AboutSection from "@/components/features/about/AboutSection";
+import PageBanner from "@/components/sections/PageBanner";
 
 const about = () => {
   return (
