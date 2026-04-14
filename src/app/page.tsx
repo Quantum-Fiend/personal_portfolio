@@ -1,4 +1,4 @@
-//import AboutSection from "@/components/home/AboutSection";
+import AboutSection from "@/components/features/home/about/AboutSection";
 import Hero from "@/components/features/home/Hero";
 //import Skills from "@/components/home/SkillsSection";
 //import ProjectSection from "@/components/home/ProjectSection";
@@ -8,8 +8,8 @@ const page = () => {
   return (
     <div>
       <Hero />
-      {/*<AboutSection />
-      <Skills />
+      <AboutSection />
+      {/*<Skills />
       <ProjectSection />
       <ArticleSection />*/}
     </div>
