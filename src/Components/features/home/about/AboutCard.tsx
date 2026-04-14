@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
 
 export default function AboutCard() {
@@ -26,17 +27,13 @@ export default function AboutCard() {
         </p>
       </motion.div>
 
+      {/* 👉 YOU control Link separately */}
       <Link href="/about">
-        <motion.button
-          whileHover={{
-            scale: 1.1,
-            boxShadow: "0px 0px 30px rgba(139,92,246,0.4)",
-          }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
-        >
-          More About Me →
-        </motion.button>
+        <div className="mt-8">
+          <Button className="bg-linear-to-r from-white via-gray-300 to-gray-500">
+            More About Me →
+          </Button>
+        </div>
       </Link>
     </>
   );
