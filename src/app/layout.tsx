@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Funnel_Sans } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/Components/layouts/header";
-import SocialBar from "@/Components/ui/SocialBar";
-import SplashCursor from "@/Components/ui/SplashCursor";
-import Footer from "@/Components/layouts/footer";
-import ShootingStarsBackground from "@/Components/ui/ShootingStarEffect";
-import ScrollToTop from "@/Components/ui/ScrollTop";
+import Header from "@/components/layouts/header";
+import SocialBar from "@/components/ui/SocialBar";
+import SplashCursor from "@/components/ui/SplashCursor";
+import Footer from "@/components/layouts/footer";
+import ShootingStars from "@/components/ui/ShootingStarEffect";
+import ScrollToTop from "@/components/ui/ScrollTop";
+
+
 
 const funnelSans = Funnel_Sans({
   variable: "--font-funnel-sans",
@@ -26,8 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${funnelSans.variable} h-full antialiased`}>
       <body className="font-sans">
         {/* BACKGROUND LAYER (ALWAYS FIRST) */}
-        <ShootingStarsBackground />
-
+        <ShootingStars />
         {/* APP LAYER */}
         <div id="app-root">
           <Header />
