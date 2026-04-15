@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Funnel_Sans } from "next/font/google";
+import { Funnel_Sans, Geist } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/layouts/header";
@@ -8,8 +8,9 @@ import SplashCursor from "@/components/ui/SplashCursor";
 import Footer from "@/components/layouts/footer";
 import ShootingStars from "@/components/ui/ShootingStarEffect";
 import ScrollToTop from "@/components/ui/ScrollTop";
+import { cn } from "@/lib/utils";
 
-
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const funnelSans = Funnel_Sans({
   variable: "--font-funnel-sans",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${funnelSans.variable} h-full antialiased`}>
+    <html lang="en" className={cn("h-full", "antialiased", funnelSans.variable, "font-sans", geist.variable)}>
       <body className="font-sans">
         {/* BACKGROUND LAYER (ALWAYS FIRST) */}
         <ShootingStars />
