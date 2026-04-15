@@ -1,42 +1,55 @@
 "use client";
 
-import SpotlightCard from "@/components/ui/SpotlightCard";
+import { motion } from "framer-motion";
+import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 
 export default function ContactCards() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {/* EMAIL CARD */}
-      <SpotlightCard
-        spotlightColor="rgba(255,255,255,0.10)"
-        className="rounded-3xl"
+    <div className="grid md:grid-cols-3 gap-6">
+      {/* EMAIL */}
+      <motion.a
+        href="mailto:tusharbisht706@gmail.com"
+        whileHover={{ scale: 1.06, y: -8 }}
+        className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
+                   hover:shadow-[0_0_80px_rgba(255,255,255,0.15)] transition"
       >
-        <div className="p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
-          <h3 className="text-white text-lg font-semibold">Email</h3>
-          <p className="text-gray-400 mt-2">yourname@gmail.com</p>
-        </div>
-      </SpotlightCard>
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-linear-to-br from-white/20 via-transparent to-transparent" />
 
-      {/* SOCIAL CARD */}
-      <SpotlightCard
-        spotlightColor="rgba(255,255,255,0.08)"
-        className="rounded-3xl"
-      >
-        <div className="p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
-          <h3 className="text-white text-lg font-semibold">Social</h3>
-          <p className="text-gray-400 mt-2">GitHub • LinkedIn • Twitter</p>
-        </div>
-      </SpotlightCard>
+        <FiMail className="text-3xl mx-auto mb-4 text-white/80" />
 
-      {/* LOCATION CARD (optional but premium) */}
-      <SpotlightCard
-        spotlightColor="rgba(255,255,255,0.06)"
-        className="rounded-3xl sm:col-span-2"
+        <h3 className="text-lg font-semibold">Email Me</h3>
+        <p className="text-gray-400 text-sm mt-1">tusharbisht706@gmail.com</p>
+
+        <p className="text-xs text-gray-500 mt-4">
+          Primary contact • Fast response
+        </p>
+      </motion.a>
+
+      {/* LINKEDIN */}
+      <motion.a
+        href="www.linkedin.com/in/tushar-singh-bisht-a1099a314"
+        whileHover={{ scale: 1.05, y: -6 }}
+        className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
+                   hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
       >
-        <div className="p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
-          <h3 className="text-white text-lg font-semibold">Location</h3>
-          <p className="text-gray-400 mt-2">India • Available Worldwide</p>
-        </div>
-      </SpotlightCard>
+        <FiLinkedin className="text-3xl mx-auto mb-4 text-white/80" />
+        <h3 className="text-lg font-semibold">LinkedIn</h3>
+        <p className="text-gray-400 text-sm mt-1">
+          Let’s connect professionally
+        </p>
+      </motion.a>
+
+      {/* GITHUB */}
+      <motion.a
+        href="https://github.com/Quantum-Fiend"
+        whileHover={{ scale: 1.05, y: -6 }}
+        className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
+                   hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
+      >
+        <FiGithub className="text-3xl mx-auto mb-4 text-white/80" />
+        <h3 className="text-lg font-semibold">GitHub</h3>
+        <p className="text-gray-400 text-sm mt-1">Explore my code</p>
+      </motion.a>
     </div>
   );
 }
