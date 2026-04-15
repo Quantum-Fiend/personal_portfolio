@@ -1,5 +1,6 @@
-import ContactSection from "@/Components/sections/ContactSection";
-import PageBanner from "@/Components/sections/PageBanner";
+
+import ContactSection from "@/components/features/contact/ContactSection";
+import PageBanner from "@/components/sections/PageBanner";
 
 const page = () => {
   return (
