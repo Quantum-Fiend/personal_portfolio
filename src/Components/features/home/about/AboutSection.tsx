@@ -1,5 +1,3 @@
-"use client";
-
 import AboutHeader from "./AboutHeader";
 import AboutBadges from "./AboutBadges";
 import AboutImage from "./AboutImage";
