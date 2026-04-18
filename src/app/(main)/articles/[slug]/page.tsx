@@ -24,7 +24,7 @@ export default async function ArticlePage({ params }: Props) {
       <p className="text-white/60 mb-10">{post.frontmatter.description}</p>
 
       <div className="prose prose-invert max-w-none">
-        <MDXRemote source={post.content} /> 
+        <MDXRemote source={post.content} />
       </div>
     </div>
   );
