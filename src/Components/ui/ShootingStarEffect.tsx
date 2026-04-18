@@ -64,7 +64,7 @@ export default function ShootingStars() {
             left: `${s.left}%`,
             height: `${s.height}px`,
           }}
-          className="absolute top-0 w-[1px] bg-gradient-to-b from-white via-white/90 to-transparent"
+          className="absolute top-0 w-px bg-linear-to-b from-white via-white/90 to-transparent"
         />
       ))}
     </div>
