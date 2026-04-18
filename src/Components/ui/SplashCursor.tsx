@@ -40,7 +40,7 @@ export default function SplashCursor() {
     <div className="pointer-events-none fixed inset-0 z-10">
       {/* Outer soft glow */}
       <div
-        className="absolute w-125 h-125 rounded-full blur-[120px] opacity-40"
+        className="absolute w-140 h-140 rounded-full blur-[120px] opacity-70"
         style={{
           transform: `translate(${pos.x - 250}px, ${pos.y - 250}px)`,
           background:
@@ -50,7 +50,7 @@ export default function SplashCursor() {
 
       {/* Inner brighter core */}
       <div
-        className="absolute w-62.5   rounded-full blur-3xl opacity-70 transition-transform duration-75 ease-out"
+        className="absolute w-75 h-75 rounded-full blur-3xl opacity-70 transition-transform duration-75 ease-out"
         style={{
           transform: `translate(${pos.x - 125}px, ${pos.y - 125}px) scale(1.05)`,
           background:
