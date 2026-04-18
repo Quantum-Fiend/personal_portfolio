@@ -23,7 +23,7 @@ export default function PageBanner({
     <section className="relative w-full min-h-[75vh] flex items-center justify-center overflow-hidden px-6">
       {/* 🌊 Floating ambient orbs */}
       <motion.div
-        className="absolute w-72 h-72 rounded-full bg-white/5 blur-2xl"
+        className="absolute w-72 h-72 rounded-full bg-white/5 blur-2xl opacity-70 sm:opacity-100"
         animate={
           reduceMotion
             ? {}
@@ -33,7 +33,7 @@ export default function PageBanner({
       />
 
       <motion.div
-        className="absolute w-96 h-96 rounded-full bg-gray-400/5 blur-3xl"
+        className="absolute w-96 h-96 rounded-full bg-gray-400/5 blur-3xl opacity-60 sm:opacity-100"
         animate={
           reduceMotion
             ? {}
@@ -43,7 +43,7 @@ export default function PageBanner({
       />
 
       {/* subtle grid */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[80px_80px]" />
+      <div className="absolute inset-0 opacity-[0.015] sm:opacity-[0.03] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[80px_80px]" />
 
       {/* CONTENT */}
       <div className="relative z-10 text-center max-w-4xl">
@@ -54,12 +54,11 @@ export default function PageBanner({
           transition={{ duration: 0.7 }}
           className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight"
         >
-          {" "}
           {title}{" "}
           {highlight && <span className="text-gray-400">{highlight}</span>}
         </motion.h1>
 
-        {/* ✨ BEAUTIFUL SPAN UNDER TITLE (MAIN UPGRADE) */}
+        {/* ✨ SPAN UNDER TITLE */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
@@ -67,10 +66,8 @@ export default function PageBanner({
           className="mt-4 flex items-center justify-center"
         >
           <div className="relative">
-            {/* glowing line */}
             <div className="h-0.5 w-90 bg-linear-to-r from-transparent via-gray-400 to-transparent" />
 
-            {/* floating dot */}
             <motion.div
               animate={{ x: [-40, 40, -40] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -79,7 +76,7 @@ export default function PageBanner({
           </div>
         </motion.div>
 
-        {/* 🧠 SUB HEADING TAG (developer identity) */}
+        {/* 🧠 TAG */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,7 +97,7 @@ export default function PageBanner({
           {subtitle}
         </motion.p>
 
-        {/* 🧩 TECH STACK PILLS */}
+        {/* PILLS */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
