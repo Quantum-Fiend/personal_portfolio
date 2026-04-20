@@ -69,13 +69,13 @@ export default function Sidebar({ open, setOpen }: Props) {
             PROJECTS
           </Link>
 
-          <Link
+          {/*<Link
             href="/articles"
             onClick={() => setOpen(false)}
             className="hover:text-gray-400 transition"
           >
             ARTICLES
-          </Link>
+          </Link>*/}
 
           <Link
             href="/contact"
