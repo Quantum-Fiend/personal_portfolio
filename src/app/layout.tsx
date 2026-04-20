@@ -8,6 +8,7 @@ import SplashCursor from "@/components/ui/SplashCursor";
 import Footer from "@/components/layouts/footer";
 import ShootingStars from "@/components/ui/ShootingStarEffect";
 import ScrollToTop from "@/components/ui/ScrollTop";
+import { Toaster } from "sonner";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -53,6 +54,16 @@ export default function RootLayout({
 
           <Footer />
           <ScrollToTop />
+          <Toaster
+            position="top-right"
+            richColors
+            closeButton
+            toastOptions={{
+              style: {
+                fontSize: "14px",
+              },
+            }}
+          />
         </div>
       </body>
     </html>
