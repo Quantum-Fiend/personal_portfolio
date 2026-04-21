@@ -15,7 +15,7 @@ export default function FeaturedProjects() {
         High-impact production-ready applications
       </p>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div>
         {featuredProjects.map((p, i) => (
           <ProjectCard key={i} p={p} />
         ))}

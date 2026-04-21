@@ -9,34 +9,20 @@ export type Project = {
 };
 
 const IMAGE =
-  "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg";
+  "/project-image.png";
 
 export const featuredProjects: Project[] = [
   {
-    title: "AI SaaS Dashboard",
-    desc: "Production-grade AI analytics platform with real-time insights and authentication system.",
-    tech: ["Next.js", "Node.js", "MongoDB"],
+    title: "Re-Start (Full-Stack / Agency Website)",
+    desc: "Re-Start is a modern, responsive website designed to showcase startup services and digital solutions with a clean, conversion-focused UI.",
+    tech: ["Php", "MySql", "JavaScript", "Css", "Html"],
     features: [
-      "Real-time analytics engine",
-      "Secure authentication flow",
-      "Scalable backend architecture",
+      "Modern responsive UI with smooth animations",
+      "SEO-friendly and performance optimized layout",
+      "Clean navigation with professional branding",
     ],
     image: IMAGE,
-    live: "#",
-    github: "#",
-  },
-  {
-    title: "E-Commerce Engine",
-    desc: "Full-stack commerce system with payments, admin dashboard and optimized checkout flow.",
-    tech: ["React", "Express", "PostgreSQL"],
-    features: [
-      "Payment gateway integration",
-      "Admin control system",
-      "Optimized order pipeline",
-    ],
-    image: IMAGE,
-    live: "#",
-    github: "#",
+    live: "https://re-start.in/",
   },
 ];
 
