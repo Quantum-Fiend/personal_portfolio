@@ -1,109 +1,133 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { Project } from "./projects.data";
 
-const IMAGE =
-  "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg";
+type Props = {
+  p: Project;
+  index: number;
+};
 
-export default function ProjectCard({ p }: { p: Project }) {
+export default function ProjectCard({ p, index }: Props) {
   return (
     <div className="w-full flex items-center justify-center px-4">
       <motion.div
-        whileHover={{ y: -10, scale: 1.03 }}
-        transition={{ type: "spring", stiffness: 180, damping: 15 }}
-        className="group relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl 
-        p-5 sm:p-6 md:p-7 
-        rounded-3xl border border-white/10 
-        bg-white/5 backdrop-blur-xl 
-        overflow-hidden shadow-lg hover:shadow-2xl 
-        transition-all duration-500"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+        className="group relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl"
       >
-        {/* Glow Background */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-white/10 via-transparent to-transparent blur-2xl pointer-events-none" />
+        {/* Glow */}
+        <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-purple-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
 
-        {/* Image */}
-        <div className="relative z-10 overflow-hidden rounded-2xl mb-5 border border-white/10">
-          <Image
-            src={p.image || IMAGE}
-            alt={p.title}
-            width={900}
-            height={500}
-            className="w-full h-40 sm:h-48 md:h-52 object-cover 
-            group-hover:scale-110 transition duration-700"
-          />
-        </div>
+        {/* Card */}
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl transition-all duration-500 group-hover:scale-[1.04] group-hover:shadow-purple-500/20 p-5 sm:p-6 md:p-7 text-center">
+          {/* Image */}
+          <div className="relative h-48 sm:h-56 md:h-64 w-full overflow-hidden rounded-2xl border border-white/10">
+            <Image
+              src={p.image || "/placeholder.png"}
+              alt={p.title}
+              fill
+              className="object-cover transition duration-700 group-hover:scale-110"
+            />
 
-        {/* Title */}
-        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center text-white tracking-wide">
-          {p.title}
-        </h3>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
 
-        {/* Description */}
-        <p className="text-xs sm:text-sm text-gray-400 mt-2 sm:mt-3 text-center leading-relaxed px-2">
-          {p.desc}
-        </p>
+            {/* Shine */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-linear-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full" />
 
-        {/* Features */}
-        <div className="mt-4 sm:mt-5 space-y-1 text-center">
-          {p.features.map((f, i) => (
-            <p
-              key={i}
-              className="text-[11px] sm:text-xs text-gray-400 flex items-center justify-center gap-2"
-            >
-              <span className="text-white">•</span> {f}
+            {/* CENTER BUTTONS */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+              {p.live && (
+                <button
+                  onClick={() =>
+                    window.open(p.live, "_blank", "noopener,noreferrer")
+                  }
+                  className="px-5 py-2 rounded-full bg-linear-to-r from-white via-gray-300   text-black text-sm font-medium shadow-lg hover:scale-105 transition flex items-center gap-2"
+                >
+                  <FiExternalLink /> View Live
+                </button>
+              )}
+
+              {p.github && (
+                <button
+                  onClick={() =>
+                    window.open(p.github, "_blank", "noopener,noreferrer")
+                  }
+                  className="px-5 py-2 rounded-full border border-white/30 text-white text-sm font-medium hover:bg-white/10 hover:scale-105 transition flex items-center gap-2"
+                >
+                  <FiGithub /> View Code
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="mt-6 flex flex-col items-center">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              {p.title}
+            </h3>
+
+            {/* underline */}
+            <div className="w-10 h-0.5 bg-linear-to-r from-white/60 to-transparent mt-2 group-hover:w-16 transition-all duration-500" />
+
+            <p className="text-xs sm:text-sm text-gray-400 mt-4 leading-relaxed max-w-md">
+              {p.desc}
             </p>
-          ))}
-        </div>
 
-        {/* Tech Stack */}
-        <div className="flex flex-wrap justify-center gap-2 mt-5">
-          {p.tech.map((t, i) => (
-            <span
-              key={i}
-              className="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full 
-              border border-white/10 text-gray-300 
-              bg-white/5 hover:bg-white/10 transition"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
+            {/* Features */}
+            <div className="mt-4 space-y-1">
+              {p.features.map((f, i) => (
+                <p
+                  key={i}
+                  className="text-[11px] sm:text-xs text-gray-400 flex items-center justify-center gap-2"
+                >
+                  <span className="text-white">•</span> {f}
+                </p>
+              ))}
+            </div>
 
-        {/* Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mt-6">
-          {p.live && (
-            <button
-              onClick={() =>
-                window.open(p.live, "_blank", "noopener,noreferrer")
-              }
-              className="text-xs px-4 py-2 sm:px-5 sm:py-2.5 
-              bg-gradient-to-r from-white via-gray-300 to-gray-400 
-              text-black font-semibold rounded-full 
-              hover:scale-105 active:scale-95 
-              transition-all duration-300 
-              flex items-center gap-2 shadow-md"
-            >
-              <FiExternalLink /> Live
-            </button>
-          )}
+            {/* Tech */}
+            <div className="flex flex-wrap justify-center gap-2 mt-5">
+              {p.tech.map((t, i) => (
+                <span
+                  key={i}
+                  className="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full border border-white/10 text-gray-300 bg-white/5 hover:bg-white/10 transition"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
 
-          {p.github && (
-            <button
-              onClick={() =>
-                window.open(p.github, "_blank", "noopener,noreferrer")
-              }
-              className="text-xs px-4 py-2 sm:px-5 sm:py-2.5 
-              rounded-full border border-white/20 
-              hover:bg-white/10 hover:scale-105 active:scale-95
-              transition-all duration-300 
-              flex items-center gap-2"
-            >
-              <FiGithub /> Code
-            </button>
-          )}
+            {/* Bottom links */}
+            <div className="flex items-center justify-center gap-6 mt-6">
+              {p.live && (
+                <button
+                  onClick={() =>
+                    window.open(p.live, "_blank", "noopener,noreferrer")
+                  }
+                  className="flex items-center gap-2 text-sm text-blue-400"
+                >
+                  <FiExternalLink size={16} /> Live
+                </button>
+              )}
+
+              {p.github && (
+                <button
+                  onClick={() =>
+                    window.open(p.github, "_blank", "noopener,noreferrer")
+                  }
+                  className="flex items-center gap-2 text-sm text-gray-300"
+                >
+                  <FiGithub size={16} /> Code
+                </button>
+              )}
+            </div>
+          </div>
         </div>
       </motion.div>
     </div>

@@ -17,7 +17,7 @@ export default function FeaturedProjects() {
 
       <div>
         {featuredProjects.map((p, i) => (
-          <ProjectCard key={i} p={p} />
+          <ProjectCard key={i} p={p} index={0} />
         ))}
       </div>
     </div>
