@@ -27,7 +27,7 @@ export const githubProjects: Project[] = [
   {
     title: "Neuro_Vault_Ai",
     desc: "NeuroVault is an AI-powered knowledge base that lets users upload PDFs, code, and web data and then ask questions using semantic search and LLM-based responses.",
-    tech: ["Python", "Go" , "Next Js" , "Postgre Sql" , "Redis","Docker"],
+    tech: ["Python", "Go", "Next Js", "Postgre Sql", "Redis", "Docker"],
     features: [
       "Uploads and indexes PDFs, code, and web data",
       "Enables semantic search using embeddings",
@@ -37,20 +37,28 @@ export const githubProjects: Project[] = [
     github: "https://github.com/Quantum-Fiend/Neuro_Vault",
   },
   {
-    title: "Auth System Boilerplate",
-    desc: "Secure JWT authentication system with role-based access control.",
-    tech: ["Node.js", "JWT"],
-    features: ["JWT security", "Role access", "Session handling"],
-    image: "/project-page-images/re-start.png",
-    github: "#",
+    title: "Intelli_Spend",
+    desc: "Intelli_Spend is an AI-powered expense tracking system that analyzes spending patterns and provides smart financial insights for better budgeting.",
+    tech: ["Java", "JWT", "Docker"],
+    features: [
+      "Tracks and categorizes expenses automatically",
+      "Analyzes spending patterns using data insights",
+      "Helps users understand and improve budgeting habits",
+    ],
+    image: "/project-page-images/IntelliSpend.png",
+    github: "https://github.com/Quantum-Fiend/Intelli_Spend",
   },
   {
-    title: "API Rate Limiter",
-    desc: "Backend middleware for controlling API abuse and request throttling.",
+    title: "Aevum",
+    desc: "A next-generation debugging platform for distributed systems that enables time-travel debugging, causal tracing, and deep state inspection across microservices and async workflows.",
     tech: ["Express", "Redis"],
-    features: ["Request throttling", "Redis caching", "Abuse protection"],
-    image: "/project-page-images/re-start.png",
-    github: "#",
+    features: [
+      "Time-travel debugging across system execution history",
+      "Causal graph visualization of distributed events (DAG)",
+      "Inspect past system state with precision",
+    ],
+    image: "/project-page-images/Aveum.png",
+    github: "https://github.com/Quantum-Fiend/Aevum",
   },
   {
     title: "API Rate Limiter",
