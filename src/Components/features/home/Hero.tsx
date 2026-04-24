@@ -21,7 +21,7 @@ export default function Hero() {
               ✦ Hey there...!
             </p>
 
-            <div className="w-16 h-[2px] bg-gradient-to-r from-white/70 to-transparent mx-auto md:mx-0" />
+            <div className="w-16 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto md:mx-0" />
 
             {/* animated name */}
             <HeroText />
