@@ -17,7 +17,7 @@ export default function Hero() {
           {/* LEFT */}
           <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
             {/* greeting */}
-            <p className="text-gray-300 tracking-[0.25em] text-xs sm:text-sm md:text-base uppercase">
+            <p className="text-gray-300 tracking-[0.25em] text-3xl sm:text-3xl uppercase">
               ✦ Hey there...!
             </p>
 
