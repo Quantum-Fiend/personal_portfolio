@@ -37,7 +37,7 @@ export default function AboutImage() {
         className="relative z-10 w-80 md:w-3xl h-80 md:h-90 overflow-hidden rounded-[40px] border border-white/10 shadow-2xl"
       >
         <Image
-          src="/AboutSection.jpg"
+          src="/AboutSection.png"
           alt="about"
           width={1000}
           height={1000}
