@@ -35,14 +35,14 @@ export default function Hero() {
 
             {/* short intro */}
             <p className="text-gray-400 max-w-md mx-auto md:mx-0 text-sm sm:text-base leading-relaxed">
-              I’m a Full Stack Developer building scalable applications with
-              modern technologies and clean architecture.
+              I’m a Full Stack Developer building end-to-end scalable software
+              applications with clean architecture and production-ready
+              standards.
             </p>
 
             <p className="text-gray-400 max-w-md mx-auto md:mx-0 text-sm sm:text-base leading-relaxed">
-              I focus on performance, user experience, and crafting visually
-              refined digital products using Next.js, TypeScript, and modern UI
-              systems.
+              I focus on performance, usability, and delivering reliable digital
+              products designed to scale in real-world environments.
             </p>
 
             {/* actions */}
