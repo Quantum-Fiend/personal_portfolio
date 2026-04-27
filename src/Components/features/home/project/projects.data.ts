@@ -9,13 +9,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "Stream_Forge",
     description:
-      "A full-stack e-commerce app with cart, payments, and admin.",
-    image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
+      "StreamForge is a production-ready, fault-tolerant distributed data processing platform that handles high-volume event streams",
+    image: "/Home_Project.png",
     tags: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/Quantum-Fiend/Stream_Forge#-streamforge",
   },
   {
     title: "Portfolio Website",
