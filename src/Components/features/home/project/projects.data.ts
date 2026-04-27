@@ -11,11 +11,10 @@ export const projects: Project[] = [
   {
     title: "E-Commerce Platform",
     description:
-      "A full-stack e-commerce app with cart, payments, and admin dashboard.",
+      "A full-stack e-commerce app with cart, payments, and admin.",
     image:
       "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     tags: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-    liveUrl: "#",
     githubUrl: "#",
   },
   {
@@ -25,7 +24,6 @@ export const projects: Project[] = [
     image:
       "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
-    liveUrl: "#",
     githubUrl: "#",
   },
   {
@@ -34,7 +32,6 @@ export const projects: Project[] = [
     image:
       "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     tags: ["React", "TypeScript", "DnD"],
-    liveUrl: "#",
     githubUrl: "#",
   },
 ];

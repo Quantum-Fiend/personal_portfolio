@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ExternalLink, GitGraphIcon as Github } from "lucide-react";
+import { GitGraphIcon as Github } from "lucide-react";
 import { Project } from "./projects.data";
 
 type Props = {
@@ -43,11 +43,11 @@ export default function ProjectCard({ project, index }: Props) {
 
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
             <a
-              href={project.liveUrl}
+              href={project.githubUrl}
               target="_blank"
               className="px-5 py-2 rounded-full bg-white text-black text-sm font-medium shadow-lg hover:scale-105 transition"
             >
-              View Live Project
+              View Project
             </a>
           </div>
         </div>
@@ -62,17 +62,7 @@ export default function ProjectCard({ project, index }: Props) {
             {project.description}
           </p>
 
-          <div className="flex items-center justify-between mt-6">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                className="flex items-center gap-2 text-sm text-blue-400"
-              >
-                <ExternalLink size={16} />
-                Live
-              </a>
-            )}
+          <div className="flex items-center justify-center mt-6">
 
             {project.githubUrl && (
               <a
