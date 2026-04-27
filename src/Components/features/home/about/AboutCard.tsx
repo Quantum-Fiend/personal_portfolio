@@ -17,13 +17,14 @@ export default function AboutCard() {
         <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-700 bg-linear-to-r from-purple-500/10 via-transparent to-blue-500/10" />
 
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-          I’m a Full Stack Developer focused on building modern,
-          high-performance, and visually refined digital experiences.
+          I’m a Full Stack Developer | Software Developer focused on crafting
+          modern, high-performance digital experiences with a strong emphasis on
+          clean design, usability, and seamless user interaction.
         </p>
 
         <p className="mt-5 text-gray-400 text-sm sm:text-base leading-relaxed">
-          I work with Next.js, TypeScript, Tailwind CSS, and motion-driven UI
-          systems to create interfaces that feel alive and intentional.
+          I build and develop software systems that are smooth, responsive, and
+          thoughtfully crafted to deliver a seamless user experience.
         </p>
       </motion.div>
 
