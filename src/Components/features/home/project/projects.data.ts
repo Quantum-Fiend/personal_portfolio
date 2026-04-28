@@ -9,12 +9,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Stream_Forge",
+    title: "Sensor_Net",
     description:
-      "StreamForge is a production-ready, fault-tolerant distributed data processing platform that handles high-volume event streams",
-    image: "/Home_Project.png",
+      "Sensor_Net is a full-stack IoT platform designed to bridge the gap between hardware sensors and actionable intelligence.",
+    image: "/project1.png",
     tags: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-    githubUrl: "https://github.com/Quantum-Fiend/Stream_Forge#-streamforge",
+    githubUrl: "https://github.com/Quantum-Fiend/Sensor_Net",
   },
   {
     title: "Portfolio Website",
