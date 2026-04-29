@@ -12,7 +12,7 @@ export const projects: Project[] = [
     description:
       "Project Status: 🚧 In Progress 🚧 This project is currently undergoing active development and production hardening.",
     image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
+      "/project3.png",
 
     githubUrl: "https://github.com/Quantum-Fiend/Recruit_Flow",
   },
