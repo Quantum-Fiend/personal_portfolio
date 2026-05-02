@@ -12,7 +12,7 @@ export default function SocialBar() {
           <MdEmail />
         </a>
         <a
-          href="www.linkedin.com/in/tushar-singh-bisht-a1099a314"
+          href="https://www.linkedin.com/in/tushar-singh-bisht-a1099a314"
           className="icon linkedin"
         >
           <FaLinkedinIn />
