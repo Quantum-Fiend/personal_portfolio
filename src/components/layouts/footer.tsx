@@ -82,8 +82,8 @@ export default function Footer() {
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
             { name: "Projects", path: "/projects" },
-            //{ name: "Articles", path: "/articles" },
             { name: "Contact", path: "/contact" },
+
           ].map((item) => (
             <Link
               key={item.name}
