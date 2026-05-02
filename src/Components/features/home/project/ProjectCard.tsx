@@ -30,6 +30,9 @@ export default function ProjectCard({ project, index }: Props) {
             src={project.image}
             alt={project.title}
             fill
+            sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 50vw,
+         33vw"
             className="object-cover transition duration-700 group-hover:scale-110"
           />
 
@@ -63,7 +66,6 @@ export default function ProjectCard({ project, index }: Props) {
           </p>
 
           <div className="flex items-center justify-center mt-6">
-
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
