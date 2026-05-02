@@ -15,7 +15,6 @@ export default function PageBanner({
   highlight,
   subtitle,
   tag,
-  chips = [],
 }: PageBannerProps) {
   const reduceMotion = useReducedMotion();
 
