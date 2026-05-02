@@ -104,6 +104,8 @@ export default function Footer() {
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
             href="https://github.com/Quantum-Fiend"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-3 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/30 transition"
           >
             <GitHubIcon />
@@ -112,6 +114,8 @@ export default function Footer() {
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
             href="https://www.linkedin.com/in/tushar-singh-bisht-a1099a314"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-3 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/30 transition"
           >
             <LinkedInIcon />
