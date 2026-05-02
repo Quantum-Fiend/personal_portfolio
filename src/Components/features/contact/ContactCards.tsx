@@ -27,10 +27,12 @@ export default function ContactCards() {
 
       {/* LINKEDIN */}
       <motion.a
-        href="www.linkedin.com/in/tushar-singh-bisht-a1099a314"
+        href="https://www.linkedin.com/in/tushar-singh-bisht-a1099a314"
+        target="_blank"
+        rel="noopener noreferrer"
         whileHover={{ scale: 1.05, y: -6 }}
         className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
-                   hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
+             hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
       >
         <FiLinkedin className="text-3xl mx-auto mb-4 text-white/80" />
         <h3 className="text-lg font-semibold">LinkedIn</h3>
@@ -42,9 +44,11 @@ export default function ContactCards() {
       {/* GITHUB */}
       <motion.a
         href="https://github.com/Quantum-Fiend"
+        target="_blank"
+        rel="noopener noreferrer"
         whileHover={{ scale: 1.05, y: -6 }}
         className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
-                   hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
+             hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
       >
         <FiGithub className="text-3xl mx-auto mb-4 text-white/80" />
         <h3 className="text-lg font-semibold">GitHub</h3>
