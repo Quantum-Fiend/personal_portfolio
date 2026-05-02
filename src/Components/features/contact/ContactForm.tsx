@@ -6,7 +6,8 @@ import { FiSend } from "react-icons/fi";
 import { toast } from "sonner";
 import Button from "@/components/ui/Button";
 
-const MotionButton = motion(Button);
+// ✅ FIX: updated API
+const MotionButton = motion.create(Button);
 
 export default function ContactForm() {
   const [form, setForm] = useState({
